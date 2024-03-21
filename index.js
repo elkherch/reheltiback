@@ -17,12 +17,12 @@ const sessionStore = new SequelizeStore({
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5000'
+    origin: 'ssc.cluster-ro-c7428qqac1q4.eu-west-3.rds.amazonaws.com'
 }));
 app.use(express.json());
 app.use(router);
 
-const PORT = process.env.PORT || 5000;
+const PORT = "3306";
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
